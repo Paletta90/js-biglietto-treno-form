@@ -38,22 +38,21 @@
                             <!-- Nome e cognome -->
                             <div class="offset-2 col-2">
                                 <h6>Nome Cognome</h5>
-                                    <input type="text" class="form-control">
+                                <input type="text" id="nomeCognome" class="form-control">
                             </div>
 
                             <!-- km da percorrere -->
                             <div class="offset-1 col-2">
                                 <h6>Km da percorrere</h6>
-                                <input type="number" class="form-control">
+                                <input type="number" id="kmPercorsi" class="form-control">
                             </div>
 
                             <!-- Età -->
                             <div class="offset-1 col-2">
                                 <h6>Fascia d'età</h6>
-                                <select class="form-select">
-                                    <option value="" selected></option>
+                                <select id="etaUtente" class="form-select">
                                     <option value="1">Minorenne</option>
-                                    <option value="2" selected>Maggiorenne</option>
+                                    <option value="2">Maggiorenne</option>
                                     <option value="3">Over 65</option>
                                 </select>
                             </div>
@@ -62,8 +61,8 @@
 
                         <!-- Button -->
                         <div class="text-center mb-3">
-                            <button type="button" class="btn bg-lightgrey f-reddishpurple fw-bold me-5">Genera</button>
-                            <button type="button" class="btn bg-lightgrey f-reddishpurple fw-bold">Annulla</button>
+                            <button type="button" id="send" class="btn bg-lightgrey f-reddishpurple fw-bold me-5">Genera</button>
+                            <button type="button" id="delete" class="btn bg-lightgrey f-reddishpurple fw-bold">Annulla</button>
                         </div>
 
                     </div>
@@ -71,7 +70,7 @@
                 </div>
 
                 <!-- Blocco "Il tuo biglietto" -->
-                <div class="w-100">
+                <div id="blockTicket" class="w-100 d-none">
 
                     <!--Titolo -->
                     <h1 class="text-center text-white text-uppercase mt-5">Il tuo biglietto</h1>
@@ -89,8 +88,11 @@
 
                                     <!-- Parte Sinistra Nome Passeggero -->
                                     <div class="col-3 bg-grey">
-                                        <h4>Nome Passeggero</h4>
-                                        <h5>John Snow</h5>
+                                        <div class="py-2">
+                                            <h4>Nome Passeggero</h4>
+                                            <h5 id="nomeUtente"></h5>
+                                        </div>
+
                                     </div>
 
                                     <!-- Dettagli del biglietto -->
