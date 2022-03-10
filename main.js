@@ -5,7 +5,9 @@ let eta = document.getElementById("etaUtente");
 
 // Dichiaro le variabili per i button
 let genera = document.getElementById("send");
+let annulla = document.getElementById("delete");
 
+// Genero il ticket al click
 genera.addEventListener('click',
     function () {
 
@@ -16,26 +18,30 @@ genera.addEventListener('click',
 
         let priceKm = 0.21;
         let priceTicket;
+        let tipoBiglietto;
 
         if (eta == 1) {
 
             // Prezzo ticket con 20% di sconto
             priceKm -= (priceKm * 0.2);
             priceTicket = priceKm * km;
-            console.log(`${priceTicket}" prezzo da Minorenne"`);
+            // Tipo di biglietto
+            tipoBiglietto = "Biglietto 20% di sconto";
 
         } else if (eta == 2) {
 
             // Prezzo standanrd
             priceTicket = priceKm * km;
-            console.log(`${priceTicket}"Maggiorenne"`);
-
+            // Tipo di biglietto
+            tipoBiglietto = "Biglietto standard";
         }
         if (eta == 3) {
 
             // Prezzo con 40% di sconto
             priceKm -= (priceKm * 0.4);
             priceTicket = priceKm * km;
+            // Tipo di biglietto
+            tipoBiglietto = "Biglietto 40% di sconto";
             console.log("Over 65");
 
         }
@@ -43,7 +49,20 @@ genera.addEventListener('click',
         // Faccio comparire il ticket al click
         document.getElementById("blockTicket").classList.remove("d-none");
 
-        
+
+        // Mando in stampa i vari dati
         document.getElementById("nomeUtente").innerHTML = nome;
+        document.getElementById("tipoTicket").innerHTML = tipoBiglietto;
+        document.getElementById("carrozza").innerHTML = Math.floor(Math.random()*10) + 1;
+        document.getElementById("codiceCP").innerHTML = Math.floor(Math.random()*5000) + 4999;
+        document.getElementById("prezzo").innerHTML = priceTicket.toFixed(2) + "&#8364;";
+
+    }
+)
+
+// Cancello il ticket
+annulla.addEventListener('click',
+    function(){
+        document.getElementById("blockTicket").classList.add("d-none");
     }
 )
