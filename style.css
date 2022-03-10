@@ -1,0 +1,31 @@
+/* Utility */
+.bg-reddishpurple{
+    background-color: #b91450;
+}
+.bg-lightgrey{
+    background-color:#cccccc ;
+}
+.bg-grey{
+    background-color: #808080;
+}
+.border-grey{
+    border-color: #808080;
+}
+.f-reddishpurple{
+    color: #b91450;
+}
+.cont-95{
+    width: 95%;
+    margin: 0 auto;
+}
+.b-radius15px{
+    border-radius: 15px;
+    width: 100%;
+    height: 200px;
+}
+/* Cambio stile agli input */
+input,
+select{
+    border-color: #b91450!important;
+    border-radius: 5px;
+}
