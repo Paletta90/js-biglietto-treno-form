@@ -23,7 +23,7 @@ genera.addEventListener('click',
         if (km > 0) {
 
             // Controllo se è statto inserito un nome
-            if (nome.value.trim() != "") {
+            if (nome.value.trim() != "" && !isNaN(nome)) {
 
                 if (eta == 1) {
 
@@ -61,7 +61,7 @@ genera.addEventListener('click',
                 document.getElementById("carrozza").innerHTML = Math.floor(Math.random() * 10) + 1;
                 document.getElementById("codiceCP").innerHTML = Math.floor(Math.random() * 5000) + 4999;
                 document.getElementById("prezzo").innerHTML = priceTicket.toFixed(2) + "&#8364;";
-                
+
             } else {
                 alert("Nome non inserito");
                 location.reload();
