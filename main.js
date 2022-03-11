@@ -7,11 +7,11 @@ let eta = document.getElementById("etaUtente");
 let genera = document.getElementById("send");
 let annulla = document.getElementById("delete");
 
-// Genero il ticket al click
+// Genero il ticket al click del button "Genera"
 genera.addEventListener('click',
     function () {
 
-        // Assegno ale variabili i valori inseriti
+        // Assegno alle variabili i valori inseriti
         km = Number(km.value);
         eta = eta.value;
 
@@ -23,7 +23,7 @@ genera.addEventListener('click',
         if (km > 0) {
 
             // Controllo se è statto inserito un nome
-            if (nome.value.trim() != "" && !isNaN(nome)) {
+            if (nome.value.trim() != "") {
 
                 if (eta == 1) {
 
